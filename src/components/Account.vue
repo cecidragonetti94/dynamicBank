@@ -10,7 +10,7 @@
       </select>
     </div>
 
-    <h2>balance: <span style="color:green">{{ balance }}</span></h2>
+    <h2> balance: <span :style="[balance > 400 ? {'color': 'green'} : {'color': 'red'} ]"> {{ balance }}</span></h2>
     <hr /> 
     <h2>Account: <span style="color:green">{{ status ? "Activated" : "Disabled" }}</span> </h2>
     <div v-for="(service, index) in services" :key="index">
@@ -77,15 +77,14 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    height: 500px;
-    box-shadow: 0px 4px 5px 0px rgba(148,127,127,0.75);
--webkit-box-shadow: 0px 4px 5px 0px rgba(148,127,127,0.75);
--moz-box-shadow: 0px 4px 5px 0px rgba(148,127,127,0.75);
-width: 900px;
-margin-top:10px;
-background-color: snow;
-border-radius:  10px;
-
+  height: 500px;
+  box-shadow: 0px 4px 5px 0px rgba(148, 127, 127, 0.75);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(148, 127, 127, 0.75);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(148, 127, 127, 0.75);
+  width: 900px;
+  margin-top: 10px;
+  background-color: snow;
+  border-radius: 10px;
 }
 .cards {
   height: 35px;
@@ -93,16 +92,16 @@ border-radius:  10px;
   margin-top: 19px;
   margin-left: 8px;
 }
-.container-button{
+.container-button {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width:615px;
+  width: 615px;
   height: 40px;
   font-size: 30px;
 }
-button:hover{
+button:hover {
   background-color: rgb(29, 10, 83);
-  color:white;
+  color: white;
 }
 </style>
